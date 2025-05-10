@@ -1,21 +1,23 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { lazy } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Layout from './pages/Layout';
 
-const Home = React.lazy(() => import('./pages/Home'));
-const NotFound = React.lazy(() => import('./pages/NotFound'));
-const Projects = React.lazy(() => import('./pages/Projects'));
+const Home = lazy(() => import('./pages/Home'));
+const Projects = lazy(() => import('./pages/Projects'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 function App() {
   return (
-    <Routes>
-      <Route path='/' element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path='projects' element={<Projects />} />
-        <Route path='*' element={<NotFound />} />
-      </Route>
-    </Routes>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path='projects' element={<Projects />} />
+          <Route path='*' element={<NotFound />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

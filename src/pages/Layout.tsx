@@ -4,40 +4,44 @@ import styled from 'styled-components';
 
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
-import LoadingSpinner from '../components/LoadingSpinner';
-
-// TODO
-// include smooth scrolling
 
 function Layout() {
   return (
-    <MainBG>
-      <Suspense
-        fallback={
-          <Centered>
-            <LoadingSpinner />
-          </Centered>
-        }
-      >
-        <Nav />
-        <Outlet />
-        <Footer />
-      </Suspense>
-    </MainBG>
+    <Suspense fallback={<Loading />}>
+      <MainBG>
+        <InnerBG>
+          <Nav />
+          <Outlet />
+          <Footer />
+        </InnerBG>
+      </MainBG>
+    </Suspense>
   );
 }
 
-const MainBG = styled.div`
-  width: 95%;
-  height: 100vh;
-`;
+function Loading() {
+  return (
+    <LoadingText>
+      <h2>🌀 Loading...</h2>
+    </LoadingText>
+  );
+}
 
-const Centered = styled.div`
+const LoadingText = styled.h2`
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+
+const MainBG = styled.div`
   width: 100vw;
   height: 100vh;
+  background-color: #070d1f;
+`;
+
+const InnerBG = styled.div`
+  width: 100%;
 `;
 
 export default Layout;
