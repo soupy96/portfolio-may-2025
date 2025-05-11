@@ -1,9 +1,6 @@
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
-
-// import Hero from '../components/Hero';
-// import Body from '../components/Body';
-// import ProjectSection from '../components/ProjectSection';
+import styled from 'styled-components';
 
 function MainPage() {
   useEffect(() => {
@@ -15,11 +12,79 @@ function MainPage() {
       <Helmet>
         <title>Big Mike ✌</title>
       </Helmet>
-      {/* <Hero />
-      <Body />
-      <ProjectSection /> */}
+      <BigMainBody>
+        <InnerMainBody>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+          <h1>THIS IS A TEST</h1>
+        </InnerMainBody>
+      </BigMainBody>
     </div>
   );
 }
+
+const BigMainBody = styled.div`
+  width: 100%;
+  margin: 0;
+  padding: 0;
+`;
+
+const InnerMainBody = styled.div`
+  width: 60%;
+  margin: auto;
+`;
 
 export default MainPage;
